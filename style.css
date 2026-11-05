@@ -577,3 +577,10 @@ nav {
   .credit-row { grid-template-columns: 1fr; gap: .2rem; }
   .detail-footer { margin-top: 3.5rem; }
 }
+
+@media (max-width: 480px) {
+    nav { padding: .9rem 1rem; }
+    .nav-logo { white-space: nowrap; font-size: .9rem; }
+    .nav-links { gap: .8rem; }
+    .nav-links a { font-size: .62rem; letter-spacing: .08em; }
+}
