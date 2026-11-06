@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ValU — IPO Announcement | Shehab Sherif</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page-reveal"></div><div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+<nav>
+<a href="index.html" class="nav-logo">Shehab Sherif</a>
+<ul class="nav-links"><li><a href="index.html#work">Work</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+</nav>
+<main class="project-detail"><div class="container">
+<a class="project-back" href="index.html#work">Back to Work</a>
+<header class="project-detail-header" data-reveal><p class="project-eyebrow">ValU</p><h1 class="project-detail-title">IPO Announcement</h1></header>
+<div class="detail-films"><article class="detail-film" data-reveal>
+<p class="video-label">Campaign film</p>
+<div class="video-container">
+<iframe src="https://player.vimeo.com/video/1094352472?title=0&amp;byline=0&amp;portrait=0&amp;color=c8a96e" title="ValU — IPO Announcement — Campaign film" loading="lazy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<div class="video-hover-cap"></div>
+</div>
+<a class="detail-vimeo" href="https://vimeo.com/1094352472" target="_blank" rel="noopener">Watch on Vimeo</a>
+</article></div>
+<details class="credits-panel" data-reveal><summary>Credits</summary><dl class="credit-list"><div class="credit"><dt>Director</dt><dd>Runa Alarian</dd></div><div class="credit"><dt>DOP</dt><dd>Mohamed Thabet</dd></div><div class="credit"><dt>First AD</dt><dd>Shady Salah</dd></div><div class="credit"><dt>Agency</dt><dd>5 Degrees Marketing Solutions</dd></div><div class="credit"><dt>Managing Director</dt><dd>Mohamed El-Hazek</dd></div><div class="credit"><dt>The Cook</dt><dd>Ahmed El-Hazek</dd></div><div class="credit"><dt>Creative Director</dt><dd>Biso Zain</dd></div><div class="credit"><dt>Senior Copywriter / Songwriter</dt><dd>Shehab Sherif</dd></div><div class="credit"><dt>Junior Copywriter</dt><dd>Ahmed Sakr · Youssef Sayed</dd></div><div class="credit"><dt>Account Manager</dt><dd>Farah Ammar</dd></div><div class="credit"><dt>Junior Account Executive</dt><dd>Ahmed Habeeb</dd></div><div class="credit"><dt>Storyboard Artist</dt><dd>Khaled Abdelzaher</dd></div><div class="credit"><dt>Animation Director</dt><dd>Ahmed Abdullah</dd></div><div class="credit"><dt>Animation Team</dt><dd>Nawal Kamal &amp; Ahmed Ashraf</dd></div><div class="credit"><dt>Art Directors</dt><dd>Ahmed Emad &amp; Omar Tarek</dd></div><div class="credit"><dt>Photography</dt><dd>Mohamed Medhat</dd></div><div class="credit"><dt>Finance Management</dt><dd>Mohamed Wagdy</dd></div><div class="credit"><dt>Music Composing and Music Production</dt><dd>Ahmed Tarek Yehia</dd></div><div class="credit"><dt>Special Thanks</dt><dd>Mohamed Awny</dd></div><div class="credit"><dt>Production</dt><dd>Key films · adel_abdalla</dd></div><div class="credit"><dt>Executive Producer</dt><dd>ayshaabdelrahman</dd></div><div class="credit"><dt>Key Films GM</dt><dd>mo7amed3essam</dd></div><div class="credit"><dt>Producer</dt><dd>Rania Mekki</dd></div><div class="credit"><dt>Post Producer</dt><dd>Mohamed Tharwat</dd></div><div class="credit"><dt>Post House</dt><dd>Lzrd</dd></div><div class="credit"><dt>Editor</dt><dd>ahmed el sherbini</dd></div><div class="credit"><dt>Assistant Editor</dt><dd>youssef mohamed</dd></div><div class="credit"><dt>Colorist</dt><dd>karim mira</dd></div><div class="credit"><dt>Assistant Colorist</dt><dd>yassin ahmed · pavly adel</dd></div><div class="credit"><dt>Art Director</dt><dd>kholio</dd></div><div class="credit"><dt>Art Team</dt><dd>kareem mahmoud</dd></div><div class="credit"><dt>VFX Supervisor</dt><dd>ahmed sobhy</dd></div><div class="credit"><dt>VFX Team</dt><dd>alaa ramzy</dd></div><div class="credit"><dt>VFX Producer</dt><dd>malak abdelsalam</dd></div><div class="credit"><dt>Line Producer</dt><dd>maryam abuelmagd</dd></div><div class="credit"><dt>GM</dt><dd>omnia metwalli</dd></div></dl></details>
+<div class="project-detail-footer"><a class="project-cta" href="index.html#work">Back to Selected Work</a></div>
+</div></main>
+<script>
+window.addEventListener('load', () => setTimeout(() => document.getElementById('page-reveal').classList.add('done'), 100));
+const dot = document.getElementById('cursorDot'), ring = document.getElementById('cursorRing');
+let ringX=0, ringY=0, dotX=0, dotY=0;
+document.addEventListener('mousemove', e => { dotX=e.clientX; dotY=e.clientY; dot.style.left=dotX+'px'; dot.style.top=dotY+'px'; });
+(function animateRing(){ ringX+=(dotX-ringX)*0.12; ringY+=(dotY-ringY)*0.12; ring.style.left=ringX+'px'; ring.style.top=ringY+'px'; requestAnimationFrame(animateRing); })();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('expanded'));el.addEventListener('mouseleave',()=>ring.classList.remove('expanded'));});
+document.querySelectorAll('.video-hover-cap').forEach(cap=>{cap.addEventListener('mouseenter',()=>ring.classList.add('expanded'));cap.addEventListener('mouseleave',()=>ring.classList.remove('expanded'));cap.addEventListener('click',()=>{cap.style.pointerEvents='none';setTimeout(()=>cap.style.pointerEvents='',3000);});});
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}}),{threshold:0.12});
+document.querySelectorAll('[data-reveal]').forEach(el=>revealObserver.observe(el));
+</script>
+</body></html>
